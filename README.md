@@ -4,18 +4,42 @@ Getopt::Constraint::Mouse - A command line options processor uses Mouse's type c
 
 # SYNOPSIS
 
-    # in your script
+in your script
+
+    #!perl
     use Getopt::Constraint::Mouse;
 
     my $options = Getopt::Constraint::Mouse->get_options(
-        foo => +{ isa => 'Str', required => 1     },
-        bar => +{ isa => 'Str', default  => 'Bar' },
+        foo => +{
+            isa           => 'Str',
+            required      => 1,
+            documentation => 'Blah Blah Blah ...',
+        },
+        bar => +{
+            isa           => 'Str',
+            default       => 'Bar',
+            documentation => 'Blah Blah Blah ...',
+        },
     );
 
-    my $foo = $options->{foo};
-    my $bar = $options->{bar};
+    print $options->{foo}, "\n";
+    print $options->{bar}, "\n";
 
-# QUESTINS
+use it
+
+    $ perl ./script.pl --for=Foo --bar=Bar
+    Foo
+    Bar
+
+    $ perl ./script.pl
+    Mandatory parameter 'foo' missing in call to (eval)
+
+    usage: script.pl [-?] [long options...]
+    	-? --usage --help  Prints this usage information.
+    	--foo              Blah Blah Blah ...
+    	--bar              Blah Blah Blah ..
+
+# QUESTIONS
 
 ## What are supported Types?
 

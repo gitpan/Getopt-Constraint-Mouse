@@ -28,7 +28,7 @@ no_index:
 provides:
   Getopt::Constraint::Mouse:
     file: lib/Getopt/Constraint/Mouse.pm
-    version: 0.02
+    version: 0.03
 requires:
   Mouse: 0
   MouseX::Getopt: 0
@@ -37,4 +37,4 @@ resources:
   bugtracker: https://github.com/Cside/Getopt-Constraint-Mouse/issues
   homepage: https://github.com/Cside/Getopt-Constraint-Mouse
   repository: git://github.com/Cside/Getopt-Constraint-Mouse.git
-version: 0.02
+version: 0.03
