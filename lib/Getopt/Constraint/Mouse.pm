@@ -5,7 +5,7 @@ use warnings;
 use Mouse;
 with qw(MouseX::Getopt::GLD);
 
-our $VERSION = "0.01";
+our $VERSION = "0.02";
 
 sub get_options {
     my ($class, @args) = @_;
@@ -37,6 +37,16 @@ Getopt::Constraint::Mouse - A command line options processor uses Mouse's type c
 
     my $foo = $options->{foo};
     my $bar = $options->{bar};
+
+=head1 QUESTINS
+
+=head2 What are supported Types?
+
+See L<MouseX::Getopt#Supported-Type-Constraints> for details.
+
+=head2 What are supported Options?
+
+See L<MouseX::Getopt#METHODS> for details.
 
 =head1 SEE ALSO
 
